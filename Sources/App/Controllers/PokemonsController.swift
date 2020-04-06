@@ -8,6 +8,7 @@
 import Vapor
 
 final class PokemonsController {
+    
     func index(_ req: Request) throws -> Future<[Pokemon]> {
         return Pokemon.query(on: req).all()
     }
